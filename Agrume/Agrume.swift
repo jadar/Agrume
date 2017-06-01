@@ -4,7 +4,7 @@
 
 import UIKit
 
-public protocol AgrumeDataSource {
+@objc public protocol AgrumeDataSource: NSObjectProtocol {
 	
   /// The number of images contained in the data source
 	var numberOfImages: Int { get }
@@ -17,7 +17,7 @@ public protocol AgrumeDataSource {
 
 }
 
-public final class Agrume: UIViewController {
+@objc public final class Agrume: UIViewController {
 
   fileprivate static let transitionAnimationDuration: TimeInterval = 0.3
   fileprivate static let initialScalingToExpandFrom: CGFloat = 0.6
